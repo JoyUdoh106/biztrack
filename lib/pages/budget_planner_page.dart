@@ -1,3 +1,4 @@
+import 'package:biztrack/widgets/app_bar_logo.dart';
 import 'package:flutter/material.dart';
 
 class BudgetPlannerPage extends StatelessWidget {
@@ -7,7 +8,7 @@ class BudgetPlannerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Budget Planner'),
+        title: const AppBarLogo(height: 30),
         actions: [
           IconButton(icon: const Icon(Icons.notifications), onPressed: () {
             Navigator.pushNamed(context, '/notifications'); // Navigate to notifications page
@@ -33,9 +34,7 @@ class BudgetPlannerPage extends StatelessWidget {
                 const Text('Current Daily Budget: ₹1,000'), // Replace with dynamic budget value
                 IconButton(
                   icon: const Icon(Icons.edit),
-                  onPressed: () {
-                    // TODO: Implement Edit Daily Budget functionality (e.g., show a dialog)
-                  },
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -53,16 +52,13 @@ class BudgetPlannerPage extends StatelessWidget {
                 const Text('Current Weekly Budget: ₹7,000'), // Replace with dynamic budget value
                 IconButton(
                   icon: const Icon(Icons.edit),
-                  onPressed: () {
-                    // TODO: Implement Edit Weekly Budget functionality (e.g., show a dialog)
-                  },
+                  onPressed: () {},
                 ),
               ],
             ),
             const LinearProgressIndicator(value: 0.8), // Example progress - replace with dynamic value
             const Text('₹1,400 remaining this week'), // Replace with dynamic remaining amount
             const SizedBox(height: 20),
-            // TODO: Add Budget History/Analysis section here (Charts/Graphs)
             const Text(
               'Budget History (Example)',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),

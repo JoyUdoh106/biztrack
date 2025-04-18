@@ -1,3 +1,4 @@
+import 'package:biztrack/widgets/app_bar_logo.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
@@ -21,7 +22,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Forgot Password'),
+        title: const AppBarLogo(),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),

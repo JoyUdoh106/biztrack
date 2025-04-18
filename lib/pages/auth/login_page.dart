@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:biztrack/widgets/app_bar_logo.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -13,6 +15,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login to BizTrack'), // Updated title
+
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -21,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch, // Make buttons stretch
             children: <Widget>[
-              const FlutterLogo(size: 80),
+              const AppBarLogo(height: 80),
               const SizedBox(height: 40),
               TextField(
                 decoration: const InputDecoration(labelText: 'Email'),
@@ -35,7 +38,6 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  // TODO: Implement Login Logic - Authenticate user
                   Navigator.pushReplacementNamed(context, '/dashboard'); // Navigate to dashboard on success
                 },
                 child: const Text('Login'),
@@ -54,9 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
               TextButton(
-                onPressed: () {
-                  // TODO: Implement Forgot Password logic
-                },
+                onPressed: () {},
                 child: const Text('Forgot Password?'),
               ),
             ],

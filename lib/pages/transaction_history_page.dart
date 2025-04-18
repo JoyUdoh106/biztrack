@@ -1,3 +1,4 @@
+import 'package:biztrack/widgets/app_bar_logo.dart';
 import 'package:flutter/material.dart';
 
 class TransactionHistoryPage extends StatelessWidget {
@@ -7,7 +8,7 @@ class TransactionHistoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Transaction History'),
+        title: const AppBarLogo(height: 30),
         actions: [
           IconButton(icon: const Icon(Icons.notifications), onPressed: () {
             Navigator.pushNamed(context, '/notifications'); // Navigate to notifications page

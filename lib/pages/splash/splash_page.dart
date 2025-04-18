@@ -6,8 +6,9 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Simulate loading time or initial setup (replace with actual logic)
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 5), () {
       // Navigate to the Sign Up/Login page after the splash screen
+      // ignore: use_build_context_synchronously
       Navigator.pushReplacementNamed(context, '/login'); // Assuming '/login' is your login page route
     });
 
@@ -18,7 +19,12 @@ class SplashPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             // BizTrack Logo - Replace with your actual logo widget
-            const FlutterLogo(size: 100), // Placeholder logo
+            Image.asset(
+              'assets/images/biztrack_logo.jpg',
+
+                width: 120, // Adjust width as needed
+                height: 120, // Adjust height as needed
+            ), // Placeholder logo
             const SizedBox(height: 20),
             const Text(
               'BizTrack',

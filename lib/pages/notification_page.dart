@@ -1,3 +1,4 @@
+import 'package:biztrack/widgets/app_bar_logo.dart';
 import 'package:flutter/material.dart';
 
 class NotificationPage extends StatelessWidget {
@@ -7,7 +8,7 @@ class NotificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Notifications'),
+        title: const AppBarLogo(height: 30),
         actions: [
           IconButton(icon: const Icon(Icons.account_circle), onPressed: () {
             Navigator.pop(context); // Go back to previous page (e.g., Dashboard)

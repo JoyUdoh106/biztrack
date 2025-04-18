@@ -1,3 +1,4 @@
+import 'package:biztrack/widgets/app_bar_logo.dart';
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -7,7 +8,7 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BizTrack Dashboard'), // Or Logo
+        title: const AppBarLogo(height: 30), // Or Logo
         actions: [
           IconButton(icon: const Icon(Icons.notifications), onPressed: () {
             Navigator.pushNamed(context, '/notifications'); // Navigate to notifications page

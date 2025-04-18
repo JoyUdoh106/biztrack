@@ -1,3 +1,4 @@
+import 'package:biztrack/widgets/app_bar_logo.dart';
 import 'package:flutter/material.dart';
 
 class AddTransactionPage extends StatefulWidget {
@@ -14,7 +15,7 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add Transaction'),
+        title: const AppBarLogo(height: 30),
         actions: [
           IconButton(icon: const Icon(Icons.notifications), onPressed: () {
             Navigator.pushNamed(context, '/notifications'); // Navigate to notifications page
@@ -56,9 +57,7 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
                     child: Text(value),
                   );
                 }).toList(),
-                onChanged: (String? newValue) {
-                  // TODO: Handle category selection
-                },
+                onChanged: (String? newValue) {},
               ),
               const SizedBox(height: 10),
               TextFormField(
@@ -72,7 +71,6 @@ class _AddTransactionPageState extends State<AddTransactionPage> {
               const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
-                  // TODO: Implement Add Transaction Logic - Save transaction data
                   Navigator.pop(context); // Go back to previous screen (e.g., Dashboard)
                 },
                 child: const Text('Add Transaction'),

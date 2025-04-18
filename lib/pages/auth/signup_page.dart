@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:biztrack/widgets/app_bar_logo.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -21,7 +22,7 @@ class _SignupPageState extends State<SignupPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch, // Make buttons stretch
             children: <Widget>[
-              const FlutterLogo(size: 80),
+              const AppBarLogo(height: 80),
               const SizedBox(height: 40),
               TextField(
                 decoration: const InputDecoration(labelText: 'Full Name'),
@@ -39,8 +40,7 @@ class _SignupPageState extends State<SignupPage> {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  // TODO: Implement Sign Up Logic - Create new user account
-                  Navigator.pushReplacementNamed(context, '/dashboard'); // Navigate to dashboard on success
+                  Navigator.pushReplacementNamed(context, '/email_verification'); // Navigate to dashboard on success
                 },
                 child: const Text('Sign Up'),
               ),
